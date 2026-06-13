@@ -1,0 +1,36 @@
+# Conda environment for vedic_engine
+#
+#   conda env create -f environment.yml
+#   conda activate vedic-engine
+#
+# NOTE: the core engine and the stdlib API server have ZERO third-party runtime
+# dependencies -- they run on a bare Python interpreter. This file therefore
+# mainly pins the interpreter and provides optional extras (testing + the
+# documented Swiss Ephemeris / FastAPI upgrade paths), which are commented out
+# so the base environment stays minimal. Uncomment what you need.
+
+name: vedic-engine
+
+channels:
+  - conda-forge
+
+dependencies:
+  # --- required: just the interpreter -------------------------------------
+  - python=3.12          # 3.10+ works (uses PEP 604 unions in annotations)
+  - pip
+
+  # --- dev / testing (recommended) ----------------------------------------
+  - pytest>=8.0
+
+  # --- OPTIONAL: production-grade ephemeris (see README "Upgrade path") ----
+  # Swap the analytic ephemeris in ephemeris.py for Swiss Ephemeris while the
+  # Jyotisa layer stays unchanged. Available on conda-forge.
+  # - pyswisseph>=2.10
+
+  # --- OPTIONAL: FastAPI server instead of the stdlib http.server one ------
+  # - fastapi>=0.110
+  # - uvicorn>=0.29
+
+  # --- OPTIONAL: pip-only packages go here --------------------------------
+  # - pip:
+  #     - <package-from-pypi>

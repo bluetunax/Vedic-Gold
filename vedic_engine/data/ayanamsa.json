@@ -1,0 +1,12 @@
+{
+ "_meta": {
+  "description": "Ayanamsa value at J2000.0; grown by IAU-2006 precession at runtime",
+  "unit": "degree"
+ },
+ "anchors_j2000_deg": {
+  "lahiri": 23.85304,
+  "raman": 22.37,
+  "krishnamurti": 23.71667,
+  "fagan_bradley": 24.73639
+ }
+}
