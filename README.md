@@ -1,4 +1,4 @@
-# vedic_engine
+# Vedic Gold
 
 A **from-scratch sidereal (Jyotisa / Vedic) astrology engine** in pure Python.
 No external ephemeris files, no third-party astrology APIs, and (for the core
