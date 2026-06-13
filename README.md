@@ -169,4 +169,3 @@ ayanamsa selection) stays unchanged because it only consumes longitudes.
 - One divisional chart (D9). Others (D10, D12, …) follow the same pattern in
   `chart.py`.
 - Nutation is omitted (sub-arc-second effect, irrelevant to signs/nakshatras).
-```
